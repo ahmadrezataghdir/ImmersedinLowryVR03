@@ -7,9 +7,9 @@ public class PaintingTeleporter : MonoBehaviour
     public string targetScene; 
     public GameObject portalEffectPrefab; 
     public AudioClip teleportSound; 
-    private float effectDuration = 5f; 
+    private float effectDuration =8f; 
     private AudioSource audioSource;
-    
+    public GameObject ZonePosition; 
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class PaintingTeleporter : MonoBehaviour
     {
         if (portalEffectPrefab != null)
         {
-            Instantiate(portalEffectPrefab, transform.position, Quaternion.identity);
+            Instantiate(portalEffectPrefab, ZonePosition.transform.position, Quaternion.identity);
         }
        
         if (teleportSound != null && audioSource != null)

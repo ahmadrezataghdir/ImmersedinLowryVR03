@@ -1532,9 +1532,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: ImmersedinLowryVR03 MainScene Sagor22
-  portalEffectPrefab: {fileID: 5822941840339824836, guid: 7fa9c3d0c642f9347a1764e81eddba14,
+  portalEffectPrefab: {fileID: 7478731271839673279, guid: 4d3c8045dd8857a4b8d34c2361c61045,
     type: 3}
   teleportSound: {fileID: 8300000, guid: 9a07d2cb02e24e44b952d29ca11ce465, type: 3}
+  ZonePosition: {fileID: 1802456735}
 --- !u!114 &1337445098
 MonoBehaviour:
   m_ObjectHideFlags: 0
