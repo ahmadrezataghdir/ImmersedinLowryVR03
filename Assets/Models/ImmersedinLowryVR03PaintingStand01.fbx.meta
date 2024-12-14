@@ -3,7 +3,32 @@ guid: 129b7350e04001440897712f96a7bb1a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ImmersedinLowryVR03_PaintingStand01_M01
+    second: {fileID: 2100000, guid: 3e7ca5c41c4cebf46aa0cc86d741cfed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ImmersedinLowryVR03_PaintingStand01_M02
+    second: {fileID: 2100000, guid: 10c75b1e236c19c4d892ad0da6d54f31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ImmersedinLowryVR03_PaintingStand01_M03
+    second: {fileID: 2100000, guid: df0c93ae7b7bc124491eb41ef0c4893b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ImmersedinLowryVR03_PaintingStand01_M04
+    second: {fileID: 2100000, guid: 53f95bd4c55fcc14e9b061fbf5ce2d93, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Coming From The Mill 00 PNG
+    second: {fileID: 2800000, guid: 60eddb65a3eed4f4ea5582b448067d94, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
