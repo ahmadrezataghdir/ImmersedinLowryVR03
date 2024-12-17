@@ -128,7 +128,7 @@ QualitySettings:
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
     useLegacyDetailDistribution: 1
-    vSyncCount: 0
+    vSyncCount: 1
     realtimeGICPUUsage: 25
     lodBias: 2
     maximumLODLevel: 0
@@ -158,7 +158,7 @@ QualitySettings:
     excludedTargetPlatforms: []
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
-    Android: 1
+    Android: 2
     CloudRendering: 2
     GameCoreScarlett: 2
     GameCoreXboxOne: 2
@@ -169,6 +169,7 @@ QualitySettings:
     Server: 0
     Stadia: 2
     Standalone: 2
+    VisionOS: 0
     WebGL: 1
     Windows Store Apps: 2
     XboxOne: 2
