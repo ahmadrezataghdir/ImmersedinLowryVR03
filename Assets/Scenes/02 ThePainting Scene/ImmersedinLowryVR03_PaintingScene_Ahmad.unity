@@ -35511,6 +35511,7 @@ GameObject:
   - component: {fileID: 1553159527}
   - component: {fileID: 1553159526}
   - component: {fileID: 1553159525}
+  - component: {fileID: 1553159529}
   m_Layer: 5
   m_Name: Lady 14
   m_TagString: Untagged
@@ -35545,7 +35546,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553159523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e9a4e631b2978c498780b3dfcd16407, type: 3}
   m_Name: 
@@ -35614,6 +35615,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1553159529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553159523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9a4e631b2978c498780b3dfcd16407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
 --- !u!1 &1570502422
 GameObject:
   m_ObjectHideFlags: 0
@@ -35901,7 +35915,7 @@ GameObject:
   - component: {fileID: 1576615262}
   - component: {fileID: 1576615261}
   - component: {fileID: 1576615260}
-  - component: {fileID: 1576615259}
+  - component: {fileID: 1576615263}
   m_Layer: 5
   m_Name: Man 4
   m_TagString: Untagged
@@ -35929,19 +35943,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.7476009, y: 0.897}
   m_SizeDelta: {x: 100, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1576615259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576615257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9a4e631b2978c498780b3dfcd16407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
 --- !u!114 &1576615260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35992,7 +35993,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 611109649}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -36005,6 +36006,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1576615263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576615257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9a4e631b2978c498780b3dfcd16407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 611109649}
 --- !u!1 &1579822529
 GameObject:
   m_ObjectHideFlags: 0
