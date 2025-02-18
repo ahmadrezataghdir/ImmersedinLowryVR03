@@ -1,12 +1,13 @@
 using UnityEngine;
 using TMPro; // For TextMeshPro
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class SceneTimer : MonoBehaviour
 {
    [SerializeField] private float timeRemaining = 60f;    
     public TMP_Text timerText;
-    [SerializeField] private int nextSceneName ; // Scene to load
+    [SerializeField] private int nextSceneName ; 
 
     [Header("Audio Clips")]
     [SerializeField] private AudioClip tickSound;
@@ -14,17 +15,30 @@ public class SceneTimer : MonoBehaviour
     [SerializeField] private AudioClip timerOverSound;
 
     [Header("Prefab to Instantiate")]
-    public GameObject warningPrefab;     // Prefab to instantiate at 5 seconds
-    public Transform instantiatePosition; // Position to spawn prefab
+    public GameObject warningPrefab;     
+    public Transform instantiatePosition; 
 
-    private AudioSource audioSource;     // AudioSource to play sounds
-    private bool warningTriggered = false; // Flag for warning state
+    private AudioSource audioSource;     
+    private bool warningTriggered = false; 
+
+    [Header("Fog Settings")]
+    public float fogMaxDensity = 0.45f;
+    public float fogTransitionTime = 5f;
+    public Color fogColor = Color.gray;
 
     void Start()
     {
         // Add AudioSource component dynamically
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.loop = false;
+    }
+
+
+    private void FogSettings()
+    {
+        RenderSettings.fog = true;
+        RenderSettings.fogColor = fogColor;
+        RenderSettings.fogDensity = 0f;
     }
 
     void Update()
@@ -43,7 +57,10 @@ public class SceneTimer : MonoBehaviour
         }
         else
         {
-            LoadNextScene();
+            FogSettings();
+            //LoadNextScene();
+
+            StartCoroutine(TeleportWithFog());
         }
     }
 
@@ -82,6 +99,24 @@ public class SceneTimer : MonoBehaviour
                 followScript.target = instantiatePosition; // Set the XR rig as the target
             }
         }
+    }
+
+    private IEnumerator TeleportWithFog()
+    {
+        
+        float elapsed = 0f;
+        while (elapsed < fogTransitionTime)
+        {
+            elapsed += Time.deltaTime;
+            RenderSettings.fogDensity = Mathf.Lerp(0f, fogMaxDensity, elapsed / fogTransitionTime);
+            yield return null;
+        }
+
+        
+        yield return new WaitForSeconds(1f);
+
+
+        LoadNextScene();
     }
 
     void LoadNextScene()
